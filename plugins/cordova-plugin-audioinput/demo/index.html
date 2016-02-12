@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Cordova Plugin AudioInput Demo</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+    <style>
+        /* Disable text selection for all elements except input elements */
+        * {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: -moz-none;
+            -o-user-select: none;
+            user-select: none;
+        }
+        input {
+            -webkit-user-select: text;
+            -khtml-user-select: text;
+            -moz-user-select: text;
+            -o-user-select: text;
+            user-select: text;
+        }
+    </style>
+</head>
+
+<body>
+<div class="w3-center">
+    <h1>Cordova AudioInput Plugin - Demo</h1>
+    <div id="infoTimer"></div>
+    <div id="infoMessage">Use "Start Capture" below to begin...</div>
+    <br>
+    <form class="w3-container">
+        <label for="sampleRate">SampleRate</label>
+        <input id="sampleRate" type="number" value="44100"/> Hz<br>
+        <br>
+        <label for="bufferSize">BufferSize</label>
+        <input id="bufferSize" type="number" value="16384"/> bytes<br>
+        <br>
+        <label for="channelsMono">Channels</label><br>
+        <input type="radio" id="channelsMono" name="channels" value="1" checked> Mono
+        <input type="radio" id="channelsStereo" name="channels" value="2"> Stereo<br>
+        <br>
+        <label for="format8">Format</label><br>
+        <input type="radio" id="format8" name="format" value="PCM_8BIT"> PCM 8BIT
+        <input type="radio" id="format16" name="format" value="PCM_16BIT" checked> PCM 16BIT<br>
+        <br>
+        <br>
+        <a class="w3-btn w3-green" href="#" id="startCapture">Start Capture</a><br>
+        <br>
+        <a class="w3-btn w3-red" href="#" id="stopCapture">Stop Capture</a>
+    </form>
+</div>
+</body>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="demo.js"></script>
